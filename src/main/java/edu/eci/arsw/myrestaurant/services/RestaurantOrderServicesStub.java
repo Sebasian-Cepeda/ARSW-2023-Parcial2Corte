@@ -8,8 +8,9 @@ import edu.eci.arsw.myrestaurant.model.ProductType;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class RestaurantOrderServicesStub implements RestaurantOrderServices {
 
     
@@ -35,6 +36,8 @@ public class RestaurantOrderServicesStub implements RestaurantOrderServices {
     public Set<String> getAvailableProductNames() {
         return productsMap.keySet();
     }
+
+    
 
     @Override
     public RestaurantProduct getProductByName(String product) throws OrderServicesException {
